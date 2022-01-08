@@ -1,0 +1,412 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 11:24-0800\n"
+"PO-Revision-Date: 2022-01-08 11:24-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: .\emtiazy\apps.py:8
+msgid "Emtiazy Main Apps"
+msgstr "تطبيقات Emtiazy الرئيسية"
+
+#: .\emtiazy\models.py:13
+msgid "Site Title"
+msgstr "اسم الموقع"
+
+#: .\emtiazy\models.py:15 .\emtiazy\models.py:25
+msgid "Site Logo"
+msgstr "شعار الموقع"
+
+#: .\emtiazy\models.py:30
+msgid "Carousel Image"
+msgstr "صورة الشريط المتحرك"
+
+#: .\emtiazy\models.py:34 .\emtiazy\models.py:86 .\emtiazy\models.py:105
+#: .\emtiazy\models.py:141 .\emtiazy\models.py:179 .\emtiazy\models.py:231
+#: .\emtiazy\models.py:250 .\emtiazy\models.py:270 .\emtiazy\models.py:296
+#: .\emtiazy\models.py:376 .\emtiazy\models.py:391 .\emtiazy\models.py:405
+#: .\emtiazy\models.py:426
+msgid "Title"
+msgstr "العنوان"
+
+#: .\emtiazy\models.py:36 .\emtiazy\models.py:90 .\emtiazy\models.py:107
+#: .\emtiazy\models.py:125 .\emtiazy\models.py:143 .\emtiazy\models.py:156
+#: .\emtiazy\models.py:183 .\emtiazy\models.py:233 .\emtiazy\models.py:252
+#: .\emtiazy\models.py:272 .\emtiazy\models.py:298 .\emtiazy\models.py:378
+#: .\emtiazy\models.py:393 .\emtiazy\models.py:407 .\emtiazy\models.py:428
+msgid "Description"
+msgstr "الوصف"
+
+#: .\emtiazy\models.py:41 .\emtiazy\models.py:68 .\emtiazy\models.py:95
+#: .\emtiazy\models.py:114 .\emtiazy\models.py:128 .\emtiazy\models.py:169
+#: .\emtiazy\models.py:196 .\emtiazy\models.py:207 .\emtiazy\models.py:242
+#: .\emtiazy\models.py:261 .\emtiazy\models.py:285 .\emtiazy\models.py:301
+#: .\emtiazy\models.py:315
+msgid "Enabled"
+msgstr "تمكين"
+
+#: .\emtiazy\models.py:47
+msgid "Carousel"
+msgstr "الشريط المتحرك"
+
+#: .\emtiazy\models.py:52 .\emtiazy\models.py:124 .\emtiazy\models.py:140
+msgid "Label"
+msgstr "التسمية"
+
+#: .\emtiazy\models.py:54 .\emtiazy\models.py:278
+msgid "Red"
+msgstr "أحمر"
+
+#: .\emtiazy\models.py:55 .\emtiazy\models.py:279
+msgid "Sky Blue"
+msgstr "أزرق سماوي"
+
+#: .\emtiazy\models.py:56 .\emtiazy\models.py:277
+msgid "Blue"
+msgstr "أزرق"
+
+#: .\emtiazy\models.py:57 .\emtiazy\models.py:277
+msgid "Purple"
+msgstr "أرجواني"
+
+#: .\emtiazy\models.py:58 .\emtiazy\models.py:278
+msgid "Yellow"
+msgstr "أصفر"
+
+#: .\emtiazy\models.py:62
+msgid "Button"
+msgstr "الزر"
+
+#: .\emtiazy\models.py:66
+msgid "Action"
+msgstr "الإجراء"
+
+#: .\emtiazy\models.py:67
+msgid "Outline"
+msgstr "حدود"
+
+#: .\emtiazy\models.py:74
+msgid "Carousel Action"
+msgstr "إجراء الشريط المتحرك"
+
+#: .\emtiazy\models.py:78 .\emtiazy\models.py:120
+msgid "Why Chose"
+msgstr "لماذا يتم اختيارنا"
+
+#: .\emtiazy\models.py:78
+msgid "About Us"
+msgstr "من نحن"
+
+#: .\emtiazy\models.py:78
+msgid "Services"
+msgstr "الخدمات"
+
+#: .\emtiazy\models.py:79
+msgid "Latest Works"
+msgstr "أحدث الأعمال"
+
+#: .\emtiazy\models.py:80 .\emtiazy\models.py:245
+msgid "More Works"
+msgstr "المزيد من الأعمال"
+
+#: .\emtiazy\models.py:81
+msgid "What Customer Say"
+msgstr "ما يقوله العميل"
+
+#: .\emtiazy\models.py:82
+msgid "Our Teams"
+msgstr "فريق العمل"
+
+#: .\emtiazy\models.py:83 .\emtiazy\models.py:366
+msgid "Contact"
+msgstr "الاتصال"
+
+#: .\emtiazy\models.py:83 .\emtiazy\models.py:318
+msgid "Our Partner"
+msgstr "شركائنا"
+
+#: .\emtiazy\models.py:85
+msgid "Section Type"
+msgstr "نوع القسم"
+
+#: .\emtiazy\models.py:88
+msgid "Subtitle"
+msgstr "العنوان الفرعي"
+
+#: .\emtiazy\models.py:101
+msgid "Site Section"
+msgstr "قسم الموقع"
+
+#: .\emtiazy\models.py:113
+msgid "Descriptive Image"
+msgstr "صورة وصفية"
+
+#: .\emtiazy\models.py:127 .\emtiazy\models.py:145 .\emtiazy\models.py:191
+#: .\emtiazy\models.py:239 .\emtiazy\models.py:258 .\emtiazy\models.py:300
+#: .\emtiazy\models.py:379 .\emtiazy\models.py:395 .\emtiazy\models.py:412
+#: .\emtiazy\models.py:433
+msgid "Image"
+msgstr "الصورة"
+
+#: .\emtiazy\models.py:134
+msgid "About Us Message"
+msgstr "من نحن"
+
+#: .\emtiazy\models.py:153 .\emtiazy\models.py:206 .\emtiazy\models.py:312
+#: .\emtiazy\models.py:349
+msgid "Name"
+msgstr "الإسم"
+
+#: .\emtiazy\models.py:154
+msgid "Job"
+msgstr "الوظيفة"
+
+#: .\emtiazy\models.py:158
+msgid "Profile"
+msgstr ""
+
+#: .\emtiazy\models.py:159
+msgid "Facebook Link"
+msgstr ""
+
+#: .\emtiazy\models.py:161
+msgid "Twitter Link"
+msgstr ""
+
+#: .\emtiazy\models.py:163
+msgid "Instagram Link"
+msgstr ""
+
+#: .\emtiazy\models.py:165
+msgid "Whatsapp Link"
+msgstr ""
+
+#: .\emtiazy\models.py:167 .\emtiazy\models.py:325 .\emtiazy\models.py:351
+msgid "Phone"
+msgstr ""
+
+#: .\emtiazy\models.py:175
+msgid "Teams"
+msgstr ""
+
+#: .\emtiazy\models.py:180
+msgid "Url"
+msgstr ""
+
+#: .\emtiazy\models.py:181
+msgid "Url will be generated automatically"
+msgstr ""
+
+#: .\emtiazy\models.py:189
+msgid "Content"
+msgstr ""
+
+#: .\emtiazy\models.py:193 .\emtiazy\models.py:356
+msgid "Created At"
+msgstr ""
+
+#: .\emtiazy\models.py:195
+msgid "Updated At"
+msgstr ""
+
+#: .\emtiazy\models.py:202
+msgid "Service"
+msgstr ""
+
+#: .\emtiazy\models.py:213 .\emtiazy\models.py:229
+msgid "Work Collection"
+msgstr ""
+
+#: .\emtiazy\models.py:219
+msgid "Web Development"
+msgstr ""
+
+#: .\emtiazy\models.py:220
+msgid "Apps Development"
+msgstr ""
+
+#: .\emtiazy\models.py:221
+msgid "Stores Design"
+msgstr ""
+
+#: .\emtiazy\models.py:222
+msgid "Business Identity Design"
+msgstr ""
+
+#: .\emtiazy\models.py:223
+msgid "Web Hosting"
+msgstr ""
+
+#: .\emtiazy\models.py:223
+msgid "Graphics Design"
+msgstr ""
+
+#: .\emtiazy\models.py:224
+msgid "Digital Photo Design"
+msgstr ""
+
+#: .\emtiazy\models.py:225
+msgid "Commercial Advertising Design"
+msgstr ""
+
+#: .\emtiazy\models.py:226
+msgid "Computer Systems Design"
+msgstr ""
+
+#: .\emtiazy\models.py:227
+msgid "Media Post Design"
+msgstr ""
+
+#: .\emtiazy\models.py:227
+msgid "Others"
+msgstr ""
+
+#: .\emtiazy\models.py:264
+msgid "Our Latest Works"
+msgstr ""
+
+#: .\emtiazy\models.py:268
+msgid "Icon"
+msgstr ""
+
+#: .\emtiazy\models.py:269
+msgid "Count"
+msgstr ""
+
+#: .\emtiazy\models.py:277
+msgid "Green"
+msgstr ""
+
+#: .\emtiazy\models.py:279
+msgid "White"
+msgstr ""
+
+#: .\emtiazy\models.py:280
+msgid "Dark"
+msgstr ""
+
+#: .\emtiazy\models.py:282
+msgid "Theme"
+msgstr ""
+
+#: .\emtiazy\models.py:284
+msgid "Text as Theme"
+msgstr ""
+
+#: .\emtiazy\models.py:291
+msgid "Statistic"
+msgstr ""
+
+#: .\emtiazy\models.py:307
+msgid "What Customers Say"
+msgstr ""
+
+#: .\emtiazy\models.py:314
+msgid "Logo"
+msgstr ""
+
+#: .\emtiazy\models.py:323
+msgid "Address"
+msgstr ""
+
+#: .\emtiazy\models.py:327 .\emtiazy\models.py:350
+msgid "Email"
+msgstr ""
+
+#: .\emtiazy\models.py:329
+msgid "Facebook"
+msgstr ""
+
+#: .\emtiazy\models.py:331
+msgid "Twitter"
+msgstr ""
+
+#: .\emtiazy\models.py:333
+msgid "Instagram"
+msgstr ""
+
+#: .\emtiazy\models.py:335
+msgid "Whatsapp"
+msgstr ""
+
+#: .\emtiazy\models.py:337
+msgid "From Time"
+msgstr ""
+
+#: .\emtiazy\models.py:339
+msgid "To Time"
+msgstr ""
+
+#: .\emtiazy\models.py:345
+msgid "Contact Info"
+msgstr ""
+
+#: .\emtiazy\models.py:352
+msgid "Subject"
+msgstr ""
+
+#: .\emtiazy\models.py:354
+msgid "Message"
+msgstr ""
+
+#: .\emtiazy\models.py:362
+msgid "Contact Us"
+msgstr ""
+
+#: .\emtiazy\models.py:372
+msgid "Subscribers"
+msgstr ""
+
+#: .\emtiazy\models.py:385
+msgid "Page About Info"
+msgstr "معلومات صفحة عنا"
+
+#: .\emtiazy\models.py:390
+msgid "Page About"
+msgstr "صفحة عنا"
+
+#: .\emtiazy\models.py:401
+msgid "Page About Point"
+msgstr "نقاط صفحة عنا"
+
+#: .\emtiazy\models.py:422
+msgid "Contact Us Info"
+msgstr "بيانات التواصل"
+
+#: .\emtiazy\models.py:441
+msgid "Page Contact Info"
+msgstr "معلومات صفحة التواصل"
+
+#: .\emtiazy\validators.py:8
+msgid "Enter a valid Facebook account."
+msgstr "أدخل حساب فيسبوك صالح."
+
+#: .\emtiazy\validators.py:24
+msgid "Enter a valid Twitter account."
+msgstr "أدخل حساب تويتر صالح."
+
+#: .\emtiazy\validators.py:40 .\emtiazy\validators.py:72
+msgid "Enter a valid phone number."
+msgstr "أدخل رقم هاتف صالح."
+
+#: .\emtiazy\validators.py:56
+msgid "Enter a valid Instagram account."
+msgstr "أدخل حسابا صالحا على Instagram."
+
+#: .\emtiazy\validators.py:88
+msgid "Enter a valid Whatsapp account."
+msgstr "أدخل حساب واتساب صالح."
