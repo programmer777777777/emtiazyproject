@@ -1,6 +1,6 @@
 from django.urls import path
 
-from api.views import (CarouselApiView, contact_us_info_api_view, page_contact_info_api_view, site_logo_api_view, WhyChoseApiView, SiteSectionApiView,
+from api.views import (AppDMoreWorksApiView, BusinessDMoreWorksApiView, CarouselApiView, CommercialDMoreWorksApiView, ComputerDMoreWorksApiView, DigitalDMoreWorksApiView, GraphicsDMoreWorksApiView, WebHostingMoreWorksApiView, MediaDMoreWorksApiView, OthersMoreWorksApiView, StoreDMoreWorksApiView, WebDMoreWorksApiView, contact_us_info_api_view, page_contact_info_api_view, site_logo_api_view, WhyChoseApiView, SiteSectionApiView,
                        AbutUsMessageApiView, TeamApiView, ServiceApiView, StatisticApiView, WhatCustomersSayApiView,
                        OurPartnerApiView, MoreWorksApiView, LatestWorkApiView, page_about_info_api_view,
                        contact_info_api_view)
@@ -16,6 +16,19 @@ urlpatterns = [
     path('teams/', TeamApiView.as_view()),
     path('services/', ServiceApiView.as_view()),
     path('moreworks/', MoreWorksApiView.as_view()),
+    # TODO: These urls will be removed in the future.
+    path('wdmoreworks/', WebDMoreWorksApiView.as_view()),
+    path('admoreworks/', AppDMoreWorksApiView.as_view()),
+    path('sdmoreworks/', StoreDMoreWorksApiView.as_view()),
+    path('bidmoreworks/', BusinessDMoreWorksApiView.as_view()),
+    path('whmoreworks/', WebHostingMoreWorksApiView.as_view()),
+    path('gdmoreworks/', GraphicsDMoreWorksApiView.as_view()),
+    path('dpdmoreworks/', DigitalDMoreWorksApiView.as_view()),
+    path('cadmoreworks/', CommercialDMoreWorksApiView.as_view()),
+    path('cdmoreworks/', ComputerDMoreWorksApiView.as_view()),
+    path('mpdmoreworks/', MediaDMoreWorksApiView.as_view()),
+    path('odmoreworks/', OthersMoreWorksApiView.as_view()),
+    # End of TODO: These urls will be removed in the future.
     path('latestworks/', LatestWorkApiView.as_view()),
     path('statistics/', StatisticApiView.as_view()),
     path('whatcustomerssay/', WhatCustomersSayApiView.as_view()),

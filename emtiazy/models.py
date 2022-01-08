@@ -215,8 +215,16 @@ class WorkCollection(models.Model):
 
 class MoreWorks(models.Model):
     # work_collection = models.ForeignKey(WorkCollection, on_delete=models.PROTECT)
-    WORK_COLLECTION_CHOICES = [('graphics', _('Graphics')), ('web_design', _(
-        'Web Design')), ('mobile_development', _('Mobile Development')), ('other', _('Other'))]
+    WORK_COLLECTION_CHOICES = [
+        ('web_development', _('Web Development')
+         ), ('apps_development', _('Apps Development')),
+        ('stores_design', _('Stores Design')
+         ), ('businessـidentityـdesign', _('Business Identity Design')),
+        ('web_hosting', _('Web Hosting')), ('graphics_design', _('Graphics Design')),
+        ('digitalـphotoـdesign', _('Digital Photo Design')
+         ), ('commercialـadvertisingـdesign', _('Commercial Advertising Design')),
+        ('computerـsystemsـdesign', _('Computer Systems Design')),
+        ('media_post_design', _('Media Post Design')), ('others', _('Others'))]
     work_collection = models.CharField(
         max_length=50, choices=WORK_COLLECTION_CHOICES, verbose_name=_('Work Collection'))
     title = models.CharField(max_length=50, verbose_name=_(

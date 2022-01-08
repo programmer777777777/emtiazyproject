@@ -1,7 +1,7 @@
 from rest_framework import status, generics
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-
+from django.db.models import F
 from api.serializers import (ContactUsInfoSerializer, PageContactInfoSerializer, SiteLogoSerializer, CarouselSerializer, WhyChoseSerializer, TeamSerializer,
                              SiteSectionSerializer, AboutUsMessageSerializer, ServiceSerializer, StatisticSerializer,
                              WhatCustomersSaySerializer, OurPartnerSerializer, MoreWorksSerializer,
@@ -47,7 +47,79 @@ class ServiceApiView(generics.ListAPIView):
 
 class MoreWorksApiView(generics.ListAPIView):
     serializer_class = MoreWorksSerializer
-    queryset = MoreWorksSerializer.Meta.model.objects.filter(enabled=True)
+    queryset = MoreWorksSerializer.Meta.model.objects.filter(
+        enabled=True)
+
+# TODO: These apis will be removed in the future.
+
+
+class WebDMoreWorksApiView(generics.ListAPIView):
+    serializer_class = MoreWorksSerializer
+    queryset = MoreWorksSerializer.Meta.model.objects.filter(
+        enabled=True, work_collection='web_development')
+
+
+class AppDMoreWorksApiView(generics.ListAPIView):
+    serializer_class = MoreWorksSerializer
+    queryset = MoreWorksSerializer.Meta.model.objects.filter(
+        enabled=True, work_collection='apps_development')
+
+
+class StoreDMoreWorksApiView(generics.ListAPIView):
+    serializer_class = MoreWorksSerializer
+    queryset = MoreWorksSerializer.Meta.model.objects.filter(
+        enabled=True, work_collection='stores_design')
+
+
+class BusinessDMoreWorksApiView(generics.ListAPIView):
+    serializer_class = MoreWorksSerializer
+    queryset = MoreWorksSerializer.Meta.model.objects.filter(
+        enabled=True, work_collection='businessـidentityـdesign')
+
+
+class WebHostingMoreWorksApiView(generics.ListAPIView):
+    serializer_class = MoreWorksSerializer
+    queryset = MoreWorksSerializer.Meta.model.objects.filter(
+        enabled=True, work_collection='web_hosting')
+
+
+class GraphicsDMoreWorksApiView(generics.ListAPIView):
+    serializer_class = MoreWorksSerializer
+    queryset = MoreWorksSerializer.Meta.model.objects.filter(
+        enabled=True, work_collection='graphics_design')
+
+
+class DigitalDMoreWorksApiView(generics.ListAPIView):
+    serializer_class = MoreWorksSerializer
+    queryset = MoreWorksSerializer.Meta.model.objects.filter(
+        enabled=True, work_collection='digitalـphotoـdesign')
+
+
+class CommercialDMoreWorksApiView(generics.ListAPIView):
+    serializer_class = MoreWorksSerializer
+    queryset = MoreWorksSerializer.Meta.model.objects.filter(
+        enabled=True, work_collection='commercialـadvertisingـdesign')
+
+
+class ComputerDMoreWorksApiView(generics.ListAPIView):
+    serializer_class = MoreWorksSerializer
+    queryset = MoreWorksSerializer.Meta.model.objects.filter(
+        enabled=True, work_collection='computerـsystemsـdesign')
+
+
+class MediaDMoreWorksApiView(generics.ListAPIView):
+    serializer_class = MoreWorksSerializer
+    queryset = MoreWorksSerializer.Meta.model.objects.filter(
+        enabled=True, work_collection='media_post_design')
+
+
+class OthersMoreWorksApiView(generics.ListAPIView):
+    serializer_class = MoreWorksSerializer
+    queryset = MoreWorksSerializer.Meta.model.objects.filter(
+        enabled=True, work_collection='others')
+
+
+# End of TODO: These apis will be removed in the future.
 
 
 class LatestWorkApiView(generics.ListAPIView):

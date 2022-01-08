@@ -114,32 +114,17 @@ class ServiceSerializer(serializers.ModelSerializer):
 
 class MoreWorksSerializer(serializers.ModelSerializer):
     image = serializers.SerializerMethodField('get_image')
-    collection_name = serializers.CharField(
-        source='collection.name', read_only=True)
+    work_collection = serializers.CharField(
+        source='get_work_collection_display', read_only=True)
 
     class Meta:
         model = MoreWorks
-        fields = ['id', 'collection_name', 'title', 'description', 'image']
+        fields = ['id', 'work_collection', 'title', 'description', 'image']
 
     def get_image(self, obj):
         if obj.image:
             return obj.image.url
         return None
-
-
-# class MoreWorksListSerializer(serializers.ModelSerializer):
-#     graphics = serializers.SerializerMethodField()
-#     web_design = serializers.SerializerMethodField()
-
-#     def get_graphics(self, instance):
-#         return MoreWorksSerializer(instance..filter(wor='a'), many=True).data
-
-#     def get_web_design(self, instance):
-#         return MoreWorksSerializer(instance.words.filter(group='b'), many=True).data
-
-#     class Meta:
-#         model = Dictionary
-#         fields = ('group_a', 'group_b')
 
 
 class LatestWorkSerializer(serializers.ModelSerializer):
@@ -192,7 +177,7 @@ class ContactInfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = ContactInfo
         fields = ['id', 'address', 'phone', 'email', 'facebook', 'twitter', 'instagram',
-                  'whatsapp']
+                  'whatsapp', 'open_from_time', 'open_to_time']
 
 
 class PageAboutPointSerializer(serializers.ModelSerializer):
