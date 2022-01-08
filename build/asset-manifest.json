@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.22356bb0.css",
-    "main.js": "/static/js/main.f482bbb8.js",
+    "main.js": "/static/js/main.9c8dbc3c.js",
     "static/css/133.9ff1d7ae.chunk.css": "/static/css/133.9ff1d7ae.chunk.css",
     "static/js/133.db122479.chunk.js": "/static/js/133.db122479.chunk.js",
-    "static/js/431.3cf52634.chunk.js": "/static/js/431.3cf52634.chunk.js",
+    "static/js/431.a1cf3405.chunk.js": "/static/js/431.a1cf3405.chunk.js",
     "static/css/385.13758b5a.chunk.css": "/static/css/385.13758b5a.chunk.css",
     "static/js/385.cae5bd4e.chunk.js": "/static/js/385.cae5bd4e.chunk.js",
     "static/css/346.557deda1.chunk.css": "/static/css/346.557deda1.chunk.css",
@@ -26,10 +26,10 @@
     "static/media/Tajawal-Bold.ttf": "/static/media/Tajawal-Bold.bb695dc458dfb6771e73.ttf",
     "index.html": "/index.html",
     "main.22356bb0.css.map": "/static/css/main.22356bb0.css.map",
-    "main.f482bbb8.js.map": "/static/js/main.f482bbb8.js.map",
+    "main.9c8dbc3c.js.map": "/static/js/main.9c8dbc3c.js.map",
     "133.9ff1d7ae.chunk.css.map": "/static/css/133.9ff1d7ae.chunk.css.map",
     "133.db122479.chunk.js.map": "/static/js/133.db122479.chunk.js.map",
-    "431.3cf52634.chunk.js.map": "/static/js/431.3cf52634.chunk.js.map",
+    "431.a1cf3405.chunk.js.map": "/static/js/431.a1cf3405.chunk.js.map",
     "385.13758b5a.chunk.css.map": "/static/css/385.13758b5a.chunk.css.map",
     "385.cae5bd4e.chunk.js.map": "/static/js/385.cae5bd4e.chunk.js.map",
     "346.557deda1.chunk.css.map": "/static/css/346.557deda1.chunk.css.map",
@@ -51,6 +51,6 @@
   },
   "entrypoints": [
     "static/css/main.22356bb0.css",
-    "static/js/main.f482bbb8.js"
+    "static/js/main.9c8dbc3c.js"
   ]
 }
