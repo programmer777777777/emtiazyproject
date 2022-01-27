@@ -2,7 +2,7 @@ from rest_framework import status, generics
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.db.models import F
-from api.serializers import (ContactUsInfoSerializer, PageContactInfoSerializer, SiteLogoSerializer, CarouselSerializer, WhyChoseSerializer, TeamSerializer,
+from api.serializers import (ContactUsInfoSerializer, ContactedUsSerializer, PageContactInfoSerializer, SiteIntroVideoSerializer, SiteLogoSerializer, CarouselSerializer, WhyChoseSerializer, TeamSerializer,
                              SiteSectionSerializer, AboutUsMessageSerializer, ServiceSerializer, StatisticSerializer,
                              WhatCustomersSaySerializer, OurPartnerSerializer, MoreWorksSerializer,
                              LatestWorkSerializer, PageAboutInfoSerializer, ContactInfoSerializer)
@@ -18,6 +18,13 @@ def site_logo_api_view(request):
 class CarouselApiView(generics.ListAPIView):
     serializer_class = CarouselSerializer
     queryset = CarouselSerializer.Meta.model.objects.filter(enabled=True)
+
+
+@api_view(['GET'])
+def site_intro_video_view(request):
+    queryset = SiteIntroVideoSerializer.Meta.model.objects.first()
+    serializer = SiteIntroVideoSerializer(queryset, many=False)
+    return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 class SiteSectionApiView(generics.ListAPIView):
@@ -113,6 +120,18 @@ class MediaDMoreWorksApiView(generics.ListAPIView):
         enabled=True, work_collection='media_post_design')
 
 
+class LogoDMoreWorksApiView(generics.ListAPIView):
+    serializer_class = MoreWorksSerializer
+    queryset = MoreWorksSerializer.Meta.model.objects.filter(
+        enabled=True, work_collection='logo_design')
+
+
+class BusinessCardDMoreWorksApiView(generics.ListAPIView):
+    serializer_class = MoreWorksSerializer
+    queryset = MoreWorksSerializer.Meta.model.objects.filter(
+        enabled=True, work_collection='business_card_design')
+
+
 class OthersMoreWorksApiView(generics.ListAPIView):
     serializer_class = MoreWorksSerializer
     queryset = MoreWorksSerializer.Meta.model.objects.filter(
@@ -169,3 +188,13 @@ def page_contact_info_api_view(request):
     queryset = PageContactInfoSerializer.Meta.model.objects.first()
     serializer = PageContactInfoSerializer(queryset, many=False)
     return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+def contacted_us_api_view(request):
+    print(request.data)
+    serializer = ContactedUsSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response({'status': 0, 'message': '.لقد وصلتنا رسالتك ونقدر وقتك معنا وسنتواصل معك في أقرب وقت ممكن'}, status=status.HTTP_201_CREATED)
+    return Response({'status': 1, 'message': '.يرجى التأكد من بيانات الإدخال الخاصة بك'}, status=status.HTTP_400_BAD_REQUEST)

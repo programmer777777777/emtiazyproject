@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 
-from emtiazy.models import PageContactInfo, WorkCollection, ContactUsInfo, SiteLogo, Carousel, CarouselAction, WhyChose, Team, ContactInfo, SiteSection, MessagePoint, \
-    AboutUsMessage, Service, Statistic, WhatCustomersSay, OurPartner, MoreWorks, LatestWork, PageAboutPoint, \
-    PageAboutInfo, ContactUs, Subscriber
+from emtiazy.models import (PageContactInfo, SiteIntroVideo, ContactUsInfo, SiteLogo, Carousel, CarouselAction, WhyChose, Team, ContactInfo, SiteSection, MessagePoint,
+                           AboutUsMessage, Service, Statistic, WhatCustomersSay, OurPartner, MoreWorks, LatestWork, PageAboutPoint,
+                           PageAboutInfo, ContactedUs, Subscriber)
 
 admin.site.site_header = 'MY-TECH'
 
@@ -17,6 +17,17 @@ class SiteLogoAdmin(admin.ModelAdmin):
 
 
 admin.site.register(SiteLogo, SiteLogoAdmin)
+
+
+class SiteIntroVideoAdmin(admin.ModelAdmin):
+    list_display = ['title', 'heading']
+
+    def save_model(self, request, obj, form, change):
+        obj.id = 1
+        return super().save_model(request, obj, form, change)
+
+
+admin.site.register(SiteIntroVideo, SiteIntroVideoAdmin)
 
 
 class CarouseActionInline(admin.TabularInline):
@@ -97,8 +108,8 @@ admin.site.register(Service, ServiceAdmin)
 
 
 class MoreWorksAdmin(SummernoteModelAdmin):
-    list_display = ['title', 'enabled']
-    summernote_fields = ['description']
+    list_display = ['title', 'work_collection', 'enabled']
+    sumernote_fields = ['description']
 
 
 admin.site.register(MoreWorks, MoreWorksAdmin)
@@ -157,7 +168,7 @@ class ContactUsAdmin(admin.ModelAdmin):
         return False
 
 
-admin.site.register(ContactUs, ContactUsAdmin)
+admin.site.register(ContactedUs, ContactUsAdmin)
 
 
 class SubscriberAdmin(admin.ModelAdmin):

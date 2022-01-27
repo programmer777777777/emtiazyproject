@@ -22,9 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-fq0xhnb254%$_qo9kbro^(=s!g(^*%+s3rn%^08yk))-(!!wwz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'emtiazy.com', 'www.emtiazy.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost',]
 
 # Application definition
 
@@ -141,7 +141,7 @@ LOCALE_PATHS = [
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 's/'
+STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'build/static'),

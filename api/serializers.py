@@ -1,8 +1,9 @@
 from django.db import models
+from django.db.models import fields
 from rest_framework import serializers
 
-from emtiazy.models import ContactUsInfo, PageContactInfo, SiteLogo, Carousel, Team, CarouselAction, WhyChose, SiteSection, MessagePoint, AboutUsMessage, \
-    Service, Statistic, WhatCustomersSay, OurPartner, MoreWorks, LatestWork, PageAboutPoint, PageAboutInfo, ContactInfo, WorkCollection
+from emtiazy.models import (ContactedUs, ContactUsInfo, PageContactInfo, SiteLogo, Carousel, Team, CarouselAction, WhyChose, SiteSection, MessagePoint, AboutUsMessage,
+                           Service, Statistic, WhatCustomersSay, OurPartner, MoreWorks, LatestWork, PageAboutPoint, PageAboutInfo, ContactInfo, SiteIntroVideo)
 
 
 class SiteLogoSerializer(serializers.ModelSerializer):
@@ -42,6 +43,13 @@ class SiteSectionSerializer(serializers.ModelSerializer):
     class Meta:
         model = SiteSection
         fields = ['id', 'section_type', 'title', 'subtitle', 'description']
+
+
+class SiteIntroVideoSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = SiteIntroVideo
+        fields = ['title', 'heading', 'video']
 
 
 class WhyChoseSerializer(serializers.ModelSerializer):
@@ -231,3 +239,9 @@ class PageContactInfoSerializer(serializers.ModelSerializer):
         if obj.image:
             return obj.image.url
         return None
+
+
+class ContactedUsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ContactedUs
+        fields = ['id', 'name', 'email', 'phone', 'subject', 'message']

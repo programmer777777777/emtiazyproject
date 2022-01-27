@@ -25,6 +25,29 @@ class SiteLogo(models.Model):
         verbose_name_plural = _('Site Logo')
 
 
+def site_into_video_upload(instance, filename):
+    return f"intro_video/{instance.title.replace(' ', '_')}.{filename.split('.')[-1]}"
+
+
+class SiteIntroVideo(models.Model):
+    title = models.CharField(
+        max_length=50, verbose_name=_('Introduction Title'), blank=True, null=True)
+    heading = models.CharField(
+        max_length=100, verbose_name=_('Introduction Heading'), blank=True, null=True)
+    video = models.FileField(
+        verbose_name=_('Site Video'),
+        upload_to=site_into_video_upload,
+        validators=[FileExtensionValidator(
+            allowed_extensions=['mp4', 'webm', 'ogg'])],
+    )
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = _('Site Intro Video')
+
+
 class Carousel(models.Model):
     image = models.ImageField(
         verbose_name=_('Carousel Image'),
@@ -224,7 +247,7 @@ class MoreWorks(models.Model):
         ('digitalـphotoـdesign', _('Digital Photo Design')
          ), ('commercialـadvertisingـdesign', _('Commercial Advertising Design')),
         ('computerـsystemsـdesign', _('Computer Systems Design')),
-        ('media_post_design', _('Media Post Design')), ('others', _('Others'))]
+        ('media_post_design', _('Media Post Design')), ('logo_design', _('Logo Design')), ('business_card_design', _('Business Card Design')), ('others', _('Others'))]
     work_collection = models.CharField(
         max_length=50, choices=WORK_COLLECTION_CHOICES, verbose_name=_('Work Collection'))
     title = models.CharField(max_length=50, verbose_name=_(
@@ -345,10 +368,10 @@ class ContactInfo(models.Model):
         verbose_name_plural = _('Contact Info')
 
 
-class ContactUs(models.Model):
+class ContactedUs(models.Model):
     name = models.CharField(max_length=50, verbose_name=_('Name'))
     email = models.EmailField(verbose_name=_('Email'))
-    phone = models.CharField(max_length=12, verbose_name=_('Phone'))
+    phone = models.CharField(max_length=30, verbose_name=_('Phone'))
     subject = models.CharField(max_length=50, verbose_name=_('Subject'))
     message = models.TextField(verbose_name=_(
         'Message'), validators=[MaxLengthValidator(400)])
@@ -359,7 +382,7 @@ class ContactUs(models.Model):
         return self.name
 
     class Meta:
-        verbose_name_plural = _('Contact Us')
+        verbose_name_plural = _('Contacted Us')
 
 
 class Subscriber(models.Model):
